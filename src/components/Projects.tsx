@@ -10,7 +10,7 @@ const Projects = () => {
       id: 1,
       title: "ReactQuizz",
       description:
-        "ReactQuizz is a trivia app built with React, offers users an immersive and interactive experience with a wide range of trivia questions",
+        "ReactQuizz is a trivia app built with React, offers users an immersive and interactive experience with a wide range of trivia questions.",
       link: "https://github.com/abhinaba-dutta-gupta/quiz_app",
       image: project1,
     },
