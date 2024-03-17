@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { Textarea } from "./ui/textarea";
+import { Input } from "./ui/input";
 
 const Contact = ({ id }: any) => {
   const [formData, setFormData] = useState({
@@ -21,16 +23,16 @@ const Contact = ({ id }: any) => {
   };
 
   return (
-    <section id="contact" className="mb-16 px-4 text-accent">
+    <section id="contact" className="mb-16 px-4">
       <div className="container mx-auto text-center p-4">
-        <h2 className="text-4xl font-bold mb-4 text-quaternary">Contact Me</h2>
-        <p className="text-lg">
-          Have a project in mind or just want to say hello? Feel free to reach
-          out to me.
+        <h2 className="text-4xl font-bold mb-4 text-accent">Contact Me</h2>
+        <p className="text-sm text-accent">
+          {`Whether you've got a project in mind that's as complex as an algorithm or just want to 
+          drop a friendly 'Hello, World!', feel free to reach out. I'm here to geek out and get things done!`}
         </p>
         <form onSubmit={handleSubmit} className="mt-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
+            <Input
               type="text"
               id="name"
               name="name"
@@ -38,9 +40,9 @@ const Contact = ({ id }: any) => {
               value={formData.name}
               required
               placeholder="Your Name"
-              className="p-3 border rounded-md w-full focus:outline-none focus:border-blue-500"
+              className="p-3 border rounded-md w-full focus:outline-none focus:border-none"
             />
-            <input
+            <Input
               type="email"
               id="email"
               name="email"
@@ -48,18 +50,18 @@ const Contact = ({ id }: any) => {
               value={formData.email}
               required
               placeholder="Your Email"
-              className="p-3 border rounded-md w-full focus:outline-none focus:border-blue-500"
+              className="p-3 border rounded-md w-full focus:outline-none focus:border-none"
             />
           </div>
-          <textarea
+          <Textarea
             id="message"
             name="message"
             onChange={handleChange}
             value={formData.message}
             required
             placeholder="Your Message"
-            className="mt-4 p-3 border rounded-md w-full focus:outline-none focus:border-blue-500"
-          ></textarea>
+            className="mt-4 p-3 border rounded-md w-full focus:outline-none focus:border-none"
+          />
           <Button
             type="submit"
             className="bg-blue-600 text-white px-6 py-3 rounded-md mt-4 hover:bg-blue-500"
