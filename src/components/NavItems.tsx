@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NavItems = ({ destination, text }) => {
+const NavItems = ({ destination, text }: any) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -14,7 +14,6 @@ const NavItems = ({ destination, text }) => {
 
   const handleClick = () => {
     setIsClicked(!isClicked);
-    // Perform navigation
     console.log(`Navigating to ${destination}`);
   };
 
@@ -40,16 +39,5 @@ const NavItems = ({ destination, text }) => {
     </button>
   );
 };
-
-// function YourComponent() {
-//   return (
-//     <div>
-//       <NavButton destination="about" text="About" />
-//       <NavButton destination="experience" text="Experience" />
-//       <NavButton destination="projects" text="Projects" />
-//       <NavButton destination="contact" text="Contact" />
-//     </div>
-//   );
-// }
 
 export default NavItems;

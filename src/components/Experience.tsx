@@ -1,6 +1,6 @@
 import { Badge } from "./ui/badge";
 
-const Experience = () => {
+const Experience = ({ id }: any) => {
   const expArr = [
     {
       timeline: "Oct 2022 – present",

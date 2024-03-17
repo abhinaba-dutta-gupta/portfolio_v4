@@ -1,25 +1,23 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 
-const Contact = () => {
+const Contact = ({ id }: any) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    // Add your logic for form submission here
     console.log("Form submitted:", formData);
-    // You can also add a function to send the form data to your backend or perform other actions
   };
 
   return (
@@ -56,7 +54,6 @@ const Contact = () => {
           <textarea
             id="message"
             name="message"
-            rows="4"
             onChange={handleChange}
             value={formData.message}
             required

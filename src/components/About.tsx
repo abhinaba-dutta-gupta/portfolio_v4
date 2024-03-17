@@ -1,4 +1,4 @@
-const About = () => {
+const About = ({ id }: any) => {
   return (
     <section id="about" className="mb-16 scroll-mt-24 text-accent">
       <div className="container mx-auto text-center">

@@ -4,7 +4,7 @@ import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import Link from "next/link";
 
-const Projects = () => {
+const Projects = ({ id }: any) => {
   const PROJECTS = [
     {
       id: 1,
@@ -50,6 +50,7 @@ const Projects = () => {
                 <Link
                   className="text-[16px] bold underline"
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={project.link}
                 >
                   {project.title}
