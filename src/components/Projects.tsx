@@ -3,6 +3,7 @@ import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 const Projects = ({ id }: any) => {
   const PROJECTS = [
@@ -24,8 +25,9 @@ const Projects = ({ id }: any) => {
     },
     {
       id: 3,
-      title: "FlavorDash : Under development",
-      description: "A react app based on an e-commerce website. Coming soon!",
+      title: "FlavorDash",
+      description:
+        "A react app based on an e-commerce website under development. Coming soon!",
       link: "",
       image: project3,
     },
@@ -39,21 +41,22 @@ const Projects = ({ id }: any) => {
           return (
             <div
               key={project.id}
-              className="flex w-full p-4 text-accent mb-4 hover:bg-gray-800 rounded-lg"
+              className="flex flex-col md:flex-row w-full p-4 text-accent mb-4 hover:bg-gray-800 rounded-lg"
             >
               <Image
                 src={project.image}
                 alt="project image"
-                className="w-28 h-16 mr-4"
+                className="md:w-2/5 md:h-1/4 md:p-0 p-4 mr-4"
               />
-              <div className="w-full text-left">
+              <div className="w-full lg:w-auto text-center md:text-left">
                 <Link
-                  className="text-[16px] bold underline"
+                  className="flex justify-center md:justify-start items-center text-[16px] font-bold underline"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={project.link}
                 >
                   {project.title}
+                  <ArrowUpRight color="white" size={16} />
                 </Link>
                 <p className="text-sm">{project.description}</p>
               </div>

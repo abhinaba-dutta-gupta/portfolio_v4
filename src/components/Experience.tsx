@@ -1,7 +1,8 @@
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 const Experience = ({ id }: any) => {
-  const expArr = [
+  const EXPERIENCES = [
     {
       timeline: "Oct 2022 – present",
       designation: "Software Engineer",
@@ -35,7 +36,7 @@ const Experience = ({ id }: any) => {
         "Development of the prototype as per client direction.",
         "Development of the actual product using Salesforce(LWC), HTML5 & CSS.",
       ],
-      skills: ["Salesforce(LWC)", "HTML", "CSS", "Bootstrap"],
+      skills: ["Salesforce", "HTML", "CSS", "Bootstrap"],
     },
   ];
 
@@ -48,22 +49,22 @@ const Experience = ({ id }: any) => {
     <section id="experience" className="mb-16 scroll-mt-24">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4 text-accent">Experience</h2>
-        {expArr &&
-          expArr.map((exp, index) => {
+        {EXPERIENCES &&
+          EXPERIENCES.map((exp, index) => {
             return (
               <div
                 key={index}
                 className="mb-4 text-accent hover:bg-gray-800 rounded-lg"
               >
-                <div className="grid sm:grid-cols-8 sm:gap-8 md:gap-4 p-4">
+                <div className="grid gap-4 sm:grid-cols-8 p-4">
                   <header className="sm:col-span-2">{exp.timeline}</header>
-                  <div className="sm:col-span-6 text-left">
+                  <div className="sm:col-span-6 sm:text-left text-center">
                     <p className="text-xl font-bold">{exp.company}</p>
                     <p className="text-lg font-bold">{exp.designation}</p>
                     <p className="text-sm font-normal leading-normal tracking-wide my-2">
                       {exp.description.join(" ")}
                     </p>
-                    <ul className="flex">
+                    <ul className="flex flex-wrap justify-center">
                       {exp.skills.map((skill, i) => (
                         <li key={i} className="p-1">
                           <Badge className="cursor-pointer">{skill}</Badge>
@@ -75,13 +76,12 @@ const Experience = ({ id }: any) => {
               </div>
             );
           })}
-        <div className="text-left mt-12">
-          <button
-            onClick={openResume}
-            className="border-none text-lg font-semibold text-accent hover:text-slate-500"
-          >
-            View Full Résumé
-          </button>
+        <div
+          className="flex items-center cursor-pointer w-fit text-left mt-12 text-accent lg:m-0 m-auto hover:text-slate-500"
+          onClick={openResume}
+        >
+          <span className="text-lg font-semibold pr-1">View Full Résumé</span>
+          <ArrowUpRight size={16} />
         </div>
       </div>
     </section>
