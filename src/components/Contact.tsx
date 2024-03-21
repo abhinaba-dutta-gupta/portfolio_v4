@@ -28,12 +28,6 @@ const Contact = ({ id }: any) => {
         EMAILJS_CONFIG.templateId, //template ID
         e.target,
         EMAILJS_CONFIG.userId //user ID
-        // {
-        //   name: formData.name,
-        //   email: formData.email,
-        //   message: formData.message,
-        //   from_email: formData.email,
-        // }
       )
       .then(() => {
         alert(`Email sent successfully!`);

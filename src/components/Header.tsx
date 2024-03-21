@@ -1,6 +1,34 @@
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Header = ({ onNavigate }: any) => {
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll<HTMLElement>("section[id]");
+      const scrollPosition = window.scrollY;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 50; // Adjusted for navbar height
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
+          setActiveSection(sectionId || "");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
@@ -16,48 +44,60 @@ const Header = ({ onNavigate }: any) => {
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
             <li>
-              <button
-                className="group flex items-center py-3"
+              <a
+                href="#about"
+                className={`group flex items-center py-3 ${
+                  activeSection === "about" ? "active" : ""
+                }`}
                 onClick={() => onNavigate("about")}
               >
                 <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                 <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                   About
                 </span>
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                className="group flex items-center py-3 active"
+              <a
+                href="#experience"
+                className={`group flex items-center py-3 ${
+                  activeSection === "experience" ? "active" : ""
+                }`}
                 onClick={() => onNavigate("experience")}
               >
                 <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                 <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                   Experience
                 </span>
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                className="group flex items-center py-3"
+              <a
+                href="#projects"
+                className={`group flex items-center py-3 ${
+                  activeSection === "projects" ? "active" : ""
+                }`}
                 onClick={() => onNavigate("projects")}
               >
                 <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                 <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                   Projects
                 </span>
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                className="group flex items-center py-3"
+              <a
+                href="#contact"
+                className={`group flex items-center py-3 ${
+                  activeSection === "contact" ? "active" : ""
+                }`}
                 onClick={() => onNavigate("contact")}
               >
                 <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                 <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                   Contact
                 </span>
-              </button>
+              </a>
             </li>
           </ul>
         </nav>
