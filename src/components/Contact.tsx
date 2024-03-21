@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 import { Input } from "./ui/input";
+import emailjs from "@emailjs/browser";
+import EMAILJS_CONFIG from "../../config";
 
 const Contact = ({ id }: any) => {
   const [formData, setFormData] = useState({
@@ -20,6 +22,30 @@ const Contact = ({ id }: any) => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+    emailjs
+      .sendForm(
+        EMAILJS_CONFIG.serviceId, //service ID
+        EMAILJS_CONFIG.templateId, //template ID
+        e.target,
+        EMAILJS_CONFIG.userId, //user ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          from_email: formData.email,
+        }
+      )
+      .then((result) => {
+        alert(`Email sent successfully!`);
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        alert(error.text);
+      });
   };
 
   return (

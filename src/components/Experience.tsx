@@ -54,7 +54,7 @@ const Experience = ({ id }: any) => {
             return (
               <div
                 key={index}
-                className="mb-4 text-accent hover:bg-gray-800 rounded-lg"
+                className="mb-4 text-accent group hover:bg-gray-800 rounded-lg"
               >
                 <div className="grid gap-4 sm:grid-cols-8 p-4">
                   <header className="sm:col-span-2">{exp.timeline}</header>
@@ -67,7 +67,9 @@ const Experience = ({ id }: any) => {
                     <ul className="flex flex-wrap justify-center">
                       {exp.skills.map((skill, i) => (
                         <li key={i} className="p-1">
-                          <Badge className="cursor-pointer">{skill}</Badge>
+                          <Badge className="cursor-pointer bg-gray-600 group-hover:bg-primary">
+                            {skill}
+                          </Badge>
                         </li>
                       ))}
                     </ul>
