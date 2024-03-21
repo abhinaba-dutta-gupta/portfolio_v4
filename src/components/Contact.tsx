@@ -27,15 +27,15 @@ const Contact = ({ id }: any) => {
         EMAILJS_CONFIG.serviceId, //service ID
         EMAILJS_CONFIG.templateId, //template ID
         e.target,
-        EMAILJS_CONFIG.userId, //user ID
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          from_email: formData.email,
-        }
+        EMAILJS_CONFIG.userId //user ID
+        // {
+        //   name: formData.name,
+        //   email: formData.email,
+        //   message: formData.message,
+        //   from_email: formData.email,
+        // }
       )
-      .then((result) => {
+      .then(() => {
         alert(`Email sent successfully!`);
         setFormData({
           name: "",
