@@ -44,7 +44,7 @@ const Contact = ({ id }: any) => {
 
   return (
     <section id="contact" className="mb-16 px-4">
-      <div className="container mx-auto text-center p-4">
+      <div className="sm:container mx-auto sm:text-center">
         <h2 className="text-4xl font-bold mb-4 text-accent">Contact Me</h2>
         <p className="text-sm text-accent">
           {`Whether you've got a project in mind that's as complex as an algorithm or just want to 

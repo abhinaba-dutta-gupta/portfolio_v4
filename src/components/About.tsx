@@ -1,7 +1,7 @@
 const About = ({ id }: any) => {
   return (
     <section id="about" className="mb-16 scroll-mt-24 text-accent">
-      <div className="container mx-auto text-center">
+      <div className="sm:container mx-auto sm:text-center">
         <h2 className="text-4xl font-bold mb-4">About Me</h2>
         <p className="text-[16px]">
           {`Experienced and results-driven Frontend Developer with over 3 years of

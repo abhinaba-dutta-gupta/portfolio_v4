@@ -47,7 +47,7 @@ const Experience = ({ id }: any) => {
 
   return (
     <section id="experience" className="mb-16 scroll-mt-24">
-      <div className="container mx-auto text-center">
+      <div className="sm:container mx-auto sm:text-center">
         <h2 className="text-4xl font-bold mb-4 text-accent">Experience</h2>
         {EXPERIENCES &&
           EXPERIENCES.map((exp, index) => {
@@ -58,13 +58,17 @@ const Experience = ({ id }: any) => {
               >
                 <div className="grid gap-4 sm:grid-cols-8 p-4">
                   <header className="sm:col-span-2">{exp.timeline}</header>
-                  <div className="sm:col-span-6 sm:text-left text-center">
-                    <p className="text-xl font-bold">{exp.company}</p>
-                    <p className="text-lg font-bold">{exp.designation}</p>
+                  <div className="sm:col-span-6 sm:text-left">
+                    <p className="sm:text-xl text-sm font-bold">
+                      {exp.company}
+                    </p>
+                    <p className="sm:text-lg text-sm font-bold">
+                      {exp.designation}
+                    </p>
                     <p className="text-sm font-normal leading-normal tracking-wide my-2">
                       {exp.description.join(" ")}
                     </p>
-                    <ul className="flex flex-wrap justify-center">
+                    <ul className="flex flex-wrap">
                       {exp.skills.map((skill, i) => (
                         <li key={i} className="p-1">
                           <Badge className="cursor-pointer bg-gray-600 group-hover:bg-primary">
