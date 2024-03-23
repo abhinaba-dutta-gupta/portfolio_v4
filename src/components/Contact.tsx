@@ -43,14 +43,16 @@ const Contact = ({ id }: any) => {
   };
 
   return (
-    <section id="contact" className="mb-16 px-4">
+    <section id="contact" className="sm:mb-16 mb-12 scroll-mt-24">
       <div className="sm:container mx-auto sm:text-center">
-        <h2 className="text-4xl font-bold mb-4 text-accent">Contact Me</h2>
-        <p className="text-sm text-accent">
+        <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-accent">
+          CONTACT ME
+        </h2>
+        <p className="text-sm text-slate-400 px-4">
           {`Whether you've got a project in mind that's as complex as an algorithm or just want to 
           drop a friendly 'Hello, World!', feel free to reach out. I'm here to geek out and get things done!`}
         </p>
-        <form onSubmit={handleSubmit} className="mt-6">
+        <form onSubmit={handleSubmit} className="mt-6 px-4 text-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input
               type="text"

@@ -34,9 +34,11 @@ const Projects = ({ id }: any) => {
   ];
 
   return (
-    <section id="projects" className="mb-16 scroll-mt-24">
+    <section id="projects" className="sm:mb-16 mb-12 scroll-mt-24">
       <div className="sm:container mx-auto sm:text-center">
-        <h2 className="text-4xl font-bold mb-4 text-accent">Projects</h2>
+        <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-accent">
+          PROJECTS
+        </h2>
         {PROJECTS.map((project) => {
           return (
             <div
@@ -50,7 +52,7 @@ const Projects = ({ id }: any) => {
               />
               <div className="w-full lg:w-auto md:text-left">
                 <Link
-                  className="flex justify-center md:justify-start items-center text-[16px] font-bold underline"
+                  className="flex md:justify-start items-center text-[16px] font-bold underline"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={project.link}
@@ -58,7 +60,7 @@ const Projects = ({ id }: any) => {
                   {project.title}
                   <ArrowUpRight color="white" size={16} />
                 </Link>
-                <p className="text-sm">{project.description}</p>
+                <p className="text-sm text-slate-400">{project.description}</p>
               </div>
             </div>
           );

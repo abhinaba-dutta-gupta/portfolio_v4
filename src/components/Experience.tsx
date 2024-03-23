@@ -46,9 +46,11 @@ const Experience = ({ id }: any) => {
   };
 
   return (
-    <section id="experience" className="mb-16 scroll-mt-24">
+    <section id="experience" className="sm:mb-16 mb-12 scroll-mt-24">
       <div className="sm:container mx-auto sm:text-center">
-        <h2 className="text-4xl font-bold mb-4 text-accent">Experience</h2>
+        <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-accent">
+          EXPERIENCE
+        </h2>
         {EXPERIENCES &&
           EXPERIENCES.map((exp, index) => {
             return (
@@ -57,7 +59,9 @@ const Experience = ({ id }: any) => {
                 className="mb-4 text-accent group hover:bg-gray-800 rounded-lg"
               >
                 <div className="grid gap-4 sm:grid-cols-8 p-4">
-                  <header className="sm:col-span-2">{exp.timeline}</header>
+                  <header className="sm:col-span-2 text-slate-400 sm:text-[16px] text-sm">
+                    {exp.timeline}
+                  </header>
                   <div className="sm:col-span-6 sm:text-left">
                     <p className="sm:text-xl text-sm font-bold">
                       {exp.company}
@@ -65,7 +69,7 @@ const Experience = ({ id }: any) => {
                     <p className="sm:text-lg text-sm font-bold">
                       {exp.designation}
                     </p>
-                    <p className="text-sm font-normal leading-normal tracking-wide my-2">
+                    <p className="text-sm font-normal leading-normal tracking-wide my-2 text-slate-400">
                       {exp.description.join(" ")}
                     </p>
                     <ul className="flex flex-wrap">
