@@ -38,7 +38,7 @@ const Header = ({ onNavigate }: any) => {
         <h2 className="mt-3 text-lg font-medium tracking-tight text-accent sm:text-xl">
           Front-end Developer
         </h2>
-        <p className="mt-4 max-w-xs text-accent leading-normal">
+        <p className="mt-4 max-w-xs text-slate-400 leading-normal">
           {`I build responsive & user-friendly solutions for the web and beyond.`}
         </p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">

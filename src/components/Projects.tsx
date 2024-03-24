@@ -34,16 +34,16 @@ const Projects = ({ id }: any) => {
   ];
 
   return (
-    <section id="projects" className="sm:mb-16 mb-12 scroll-mt-24">
+    <section id="projects" className="sm:mb-16 mb-10 scroll-mt-24">
       <div className="sm:container mx-auto sm:text-center">
-        <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-accent">
+        <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-accent sticky top-0 z-20 bg-slate-900/75 p-4 backdrop-blur lg:relative">
           PROJECTS
         </h2>
         {PROJECTS.map((project) => {
           return (
             <div
               key={project.id}
-              className="flex flex-col md:flex-row w-full p-4 text-accent mb-4 hover:bg-gray-800 rounded-lg"
+              className="flex flex-col md:flex-row w-full p-4 text-accent sm:mb-4 hover:bg-gray-800 rounded-lg"
             >
               <Image
                 src={project.image}

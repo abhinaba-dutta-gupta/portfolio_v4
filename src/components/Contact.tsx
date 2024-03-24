@@ -43,9 +43,9 @@ const Contact = ({ id }: any) => {
   };
 
   return (
-    <section id="contact" className="sm:mb-16 mb-12 scroll-mt-24">
+    <section id="contact" className="sm:mb-16 mb-10 scroll-mt-24">
       <div className="sm:container mx-auto sm:text-center">
-        <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-accent">
+        <h2 className="sm:text-3xl text-2xl font-bold sm:mb-4 text-accent sticky top-0 z-20 bg-slate-900/75 p-4 backdrop-blur lg:relative">
           CONTACT ME
         </h2>
         <p className="text-sm text-slate-400 px-4">

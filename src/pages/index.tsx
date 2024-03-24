@@ -21,7 +21,7 @@ export default function Home() {
     >
       <div className="lg:flex lg:justify-between lg:gap-4">
         <Header onNavigate={scrollToSection} />
-        <main className="lg:w-1/2 lg:py-24 w-full py-8">
+        <main className="lg:w-1/2 lg:py-24 w-full pt-12">
           <About id="about" />
           <Experience id="experience" />
           <Projects id="projects" />
