@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Header = ({ onNavigate }: any) => {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
     const handleScroll = () => {
