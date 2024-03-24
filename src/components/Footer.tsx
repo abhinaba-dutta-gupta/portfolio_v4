@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = ({ id }: any) => {
   return (
-    <footer className="sm:py-16 text-slate-400 text-sm px-4">
+    <footer className="sm:py-16 text-slate-400 text-sm">
       <div className="sm:container mx-auto sm:text-center">
         <p>
           {`Coded in Visual Studio Code. Built with Next.js, Tailwind CSS and `}
