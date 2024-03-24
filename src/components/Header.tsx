@@ -10,7 +10,7 @@ const Header = ({ onNavigate }: any) => {
       const scrollPosition = window.scrollY;
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 50; // Adjusted for navbar height
+        const sectionTop = section.offsetTop - 96; // Adjusted for top padding
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute("id");
 
@@ -27,7 +27,7 @@ const Header = ({ onNavigate }: any) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [activeSection]);
 
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
@@ -45,8 +45,7 @@ const Header = ({ onNavigate }: any) => {
           <ul className="mt-16 w-max">
             <li>
               <a
-                href="#about"
-                className={`group flex items-center py-3 ${
+                className={`group flex items-center py-3 cursor-pointer ${
                   activeSection === "about" ? "active" : ""
                 }`}
                 onClick={() => onNavigate("about")}
@@ -59,8 +58,7 @@ const Header = ({ onNavigate }: any) => {
             </li>
             <li>
               <a
-                href="#experience"
-                className={`group flex items-center py-3 ${
+                className={`group flex items-center py-3 cursor-pointer ${
                   activeSection === "experience" ? "active" : ""
                 }`}
                 onClick={() => onNavigate("experience")}
@@ -73,8 +71,7 @@ const Header = ({ onNavigate }: any) => {
             </li>
             <li>
               <a
-                href="#projects"
-                className={`group flex items-center py-3 ${
+                className={`group flex items-center py-3 cursor-pointer ${
                   activeSection === "projects" ? "active" : ""
                 }`}
                 onClick={() => onNavigate("projects")}
@@ -87,8 +84,7 @@ const Header = ({ onNavigate }: any) => {
             </li>
             <li>
               <a
-                href="#contact"
-                className={`group flex items-center py-3 ${
+                className={`group flex items-center py-3 cursor-pointer ${
                   activeSection === "contact" ? "active" : ""
                 }`}
                 onClick={() => onNavigate("contact")}
