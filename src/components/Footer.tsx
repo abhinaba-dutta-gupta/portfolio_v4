@@ -5,7 +5,7 @@ const Footer = ({ id }: any) => {
     <footer className="sm:py-16 text-slate-400 text-sm">
       <div className="sm:container mx-auto sm:text-center">
         <p>
-          {`Coded in Visual Studio Code. Built with Next.js, Tailwind CSS and `}
+          {`Coded in Visual Studio Code. Built using Next.js, Tailwind CSS and `}
           <Link
             href="https://ui.shadcn.com/"
             target="_blank"

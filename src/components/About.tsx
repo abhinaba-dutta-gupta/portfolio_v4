@@ -2,7 +2,7 @@ const About = ({ id }: any) => {
   return (
     <section id="about" className="sm:mb-16 mb-10 scroll-mt-24">
       <div className="sm:container mx-auto sm:text-center">
-        <h2 className="sm:text-3xl text-2xl font-bold sm:mb-4 text-accent sticky top-0 z-20 bg-slate-900/75 p-4 backdrop-blur lg:relative">
+        <h2 className="sm:text-3xl text-2xl font-bold sm:mb-4 text-accent sticky top-0 z-20 bg-slate-900/75 lg:p-0 p-4 backdrop-blur lg:relative">
           ABOUT ME
         </h2>
         <div className="text-slate-400 p-4">

@@ -36,7 +36,7 @@ const Header = ({ onNavigate }: any) => {
           <Link href="/">{`Abhinaba Dutta Gupta`}</Link>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-accent sm:text-xl">
-          {`Frontend Developer`}
+          {`Frontend Engineer`}
         </h2>
         <p className="mt-4 max-w-xs text-slate-400 leading-normal">
           {`I build responsive & user-friendly solutions for the web and beyond.`}
