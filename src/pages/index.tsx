@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import IconCloud from "@/components/magicui/icon-cloud";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,39 @@ export default function Home() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const slugs = [
+    "typescript",
+    "javascript",
+    // "dart",
+    // "java",
+    "react",
+    // "flutter",
+    // "android",
+    "html5",
+    "css3",
+    "nodedotjs",
+    "express",
+    "nextdotjs",
+    // "prisma",
+    // "amazonaws",
+    // "postgresql",
+    // "firebase",
+    // "nginx",
+    "vercel",
+    // "testinglibrary",
+    "jest",
+    // "cypress",
+    // "docker",
+    "git",
+    "jira",
+    "github",
+    // "gitlab",
+    "visualstudiocode",
+    // "androidstudio",
+    // "sonarqube",
+    "figma",
+  ];
+
   return (
     <main
       className={`bg-primary mx-auto min-h-screen max-w-screen-xl px-6 sm:py-12 py-8 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0 ${inter.className}`}
@@ -26,6 +60,7 @@ export default function Home() {
           <Experience id="experience" />
           <Projects id="projects" />
           <Contact id="contact" />
+          <IconCloud iconSlugs={slugs} />
           <Footer id="footer" />
         </main>
       </div>

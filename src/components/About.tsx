@@ -7,7 +7,7 @@ const About = ({ id }: any) => {
         </h2>
         <div className="text-slate-400 p-4">
           <p className="text-[16px]">
-            {`Frontend Engineer with almost 4 years of experience leveraging React.js, Tailwind CSS, and more to craft user-centric web experiences. 
+            {`Frontend Engineer with more than 4 years of experience leveraging React.js, Tailwind CSS, and more to craft user-centric web experiences. 
             Proven track record of building reusable components, optimizing workflows, and staying ahead of the curve.`}
           </p>
           <p className="text-[16px] mt-4">
