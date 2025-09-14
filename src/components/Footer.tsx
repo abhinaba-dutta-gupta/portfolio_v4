@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const Footer = ({ id }: any) => {
   return (
-    <footer className="sm:py-16 text-slate-400 text-sm">
+    <footer className="sm:py-4 text-slate-400 text-sm">
       <div className="sm:container mx-auto sm:text-center">
-        <p>
+        <p className="px-4">
           {`Coded in Visual Studio Code. Built using Next.js, Tailwind CSS and `}
           <Link
             href="https://ui.shadcn.com/"

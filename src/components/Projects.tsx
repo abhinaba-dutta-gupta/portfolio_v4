@@ -34,21 +34,21 @@ const Projects = ({ id }: any) => {
   ];
 
   return (
-    <section id="projects" className="sm:mb-16 mb-10 scroll-mt-24">
-      <div className="sm:container mx-auto sm:text-center">
-        <h2 className="sm:text-3xl text-2xl font-bold sm:mb-4 text-accent sticky top-0 z-20 bg-slate-900/75 lg:p-0 p-4 backdrop-blur lg:relative">
-          PROJECTS
+    <section id="projects" className="sm:mb-16 mb-10 scroll-mt-24 animate-fade-in">
+      <div className="sm:container mx-auto sm:text-center bg-gradient-to-br from-[#232526]/80 to-[#414345]/80 rounded-2xl shadow-xl border border-slate-800/40 backdrop-blur-md p-4 sm:p-6 mx-auto w-full max-w-2xl text-center">
+        <h2 className="sm:text-4xl text-2xl font-extrabold sm:mb-6 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 drop-shadow-lg tracking-tight uppercase">
+          Projects
         </h2>
         {PROJECTS.map((project) => {
           return (
             <div
               key={project.id}
-              className="flex flex-col md:flex-row w-full p-4 text-accent sm:mb-4 hover:bg-gray-800 rounded-lg"
+              className="flex flex-col md:flex-row w-full p-4 text-accent sm:mb-4 hover:bg-gradient-to-r hover:from-cyan-900/60 hover:via-blue-900/60 hover:to-purple-900/60 hover:shadow-xl rounded-lg transition-all duration-300 backdrop-blur-sm"
             >
               <Image
                 src={project.image}
                 alt="project image"
-                className="md:w-2/5 md:h-1/4 md:p-0 p-4 mr-4"
+                className="md:w-2/5 md:h-1/4 md:p-0 p-4 mr-4 rounded-xl shadow-lg"
               />
               <div className="w-full lg:w-auto md:text-left">
                 <Link
