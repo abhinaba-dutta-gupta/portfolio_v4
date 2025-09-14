@@ -43,16 +43,15 @@ const Contact = ({ id }: any) => {
   };
 
   return (
-    <section id="contact" className="sm:mb-16 mb-10 scroll-mt-24 animate-fade-in">
-      <div className="sm:container mx-auto sm:text-center bg-gradient-to-br from-[#232526]/80 to-[#414345]/80 rounded-2xl shadow-xl border border-slate-800/40 backdrop-blur-md p-4 sm:p-6 mx-auto w-full max-w-2xl text-center">
-        <h2 className="sm:text-4xl text-2xl font-extrabold sm:mb-6 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 drop-shadow-lg tracking-tight uppercase">
+    <section id="contact" className="mb-12 sm:mb-20 scroll-mt-24 animate-fade-in">
+      <div className="relative mx-auto w-full max-w-3xl px-4 py-10 sm:px-8 bg-gradient-to-br from-[#232526]/90 to-[#414345]/90 rounded-3xl shadow-2xl border border-slate-800/50 backdrop-blur-xl flex flex-col items-center">
+        <h2 className="text-3xl sm:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 tracking-tight uppercase text-center">
           Contact Me
         </h2>
-        <p className="text-sm text-slate-400 px-4">
-          {`Whether you've got a project in mind that's as complex as an algorithm or just want to 
-          drop a friendly 'Hello, World!', feel free to reach out. I'm here to geek out and get things done!`}
+        <p className="text-base text-slate-300 mb-6 max-w-2xl text-center">
+          Whether you&apos;ve got a project in mind that&apos;s as complex as an algorithm or just want to drop a friendly &apos;Hello, World!&apos;, feel free to reach out. I&apos;m here to geek out and get things done!
         </p>
-        <form onSubmit={handleSubmit} className="mt-6 px-4 text-center">
+        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input
               type="text"
@@ -62,7 +61,7 @@ const Contact = ({ id }: any) => {
               value={formData.name}
               required
               placeholder="Your Name"
-              className="p-3 border rounded-md w-full focus:outline-none focus:border-none bg-slate-900/60"
+              className="p-3 border border-cyan-400/40 rounded-lg w-full focus:outline-none focus:border-cyan-400 bg-white/80 text-slate-900 placeholder-slate-500"
             />
             <Input
               type="email"
@@ -72,7 +71,7 @@ const Contact = ({ id }: any) => {
               value={formData.email}
               required
               placeholder="Your Email"
-              className="p-3 border rounded-md w-full focus:outline-none focus:border-none bg-slate-900/60"
+              className="p-3 border border-cyan-400/40 rounded-lg w-full focus:outline-none focus:border-cyan-400 bg-white/80 text-slate-900 placeholder-slate-500"
             />
           </div>
           <Textarea
@@ -82,11 +81,11 @@ const Contact = ({ id }: any) => {
             value={formData.message}
             required
             placeholder="Your Message"
-            className="mt-4 p-3 border rounded-md w-full focus:outline-none focus:border-none bg-slate-900/60"
+            className="p-3 border border-cyan-400/40 rounded-lg w-full focus:outline-none focus:border-cyan-400 bg-white/80 text-slate-900 placeholder-slate-500 min-h-[120px]"
           />
           <Button
             type="submit"
-            className="bg-blue-600 text-white px-6 py-3 rounded-md mt-4 hover:bg-blue-500 transition-colors duration-300 shadow-lg"
+            className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white px-8 py-3 rounded-xl mt-2 hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 shadow-xl text-lg font-bold tracking-wide"
           >
             Send Message
           </Button>
