@@ -41,51 +41,43 @@ const Experience = ({ id }: any) => {
   ];
 
   const openResume = () => {
-    const pdfPath = "/pdf/Resume.pdf";
+    const pdfPath = "/pdf/Abhinaba_Dutta_Gupta_Resume.pdf";
     window.open(pdfPath, "_blank");
   };
 
   return (
     <section id="experience" className="sm:mb-16 mb-10 scroll-mt-24 animate-fade-in">
       <div className="sm:container mx-auto sm:text-center bg-gradient-to-br from-[#232526]/80 to-[#414345]/80 rounded-2xl shadow-xl border border-slate-800/40 backdrop-blur-md p-4 sm:p-6 mx-auto w-full max-w-2xl text-center">
-        <h2 className="text-3xl sm:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 tracking-tight uppercase text-center">
+        <h2 className="reveal-up text-3xl sm:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 tracking-tight uppercase text-center">
           Experience
         </h2>
-        {EXPERIENCES &&
-          EXPERIENCES.map((exp, index) => {
-            return (
-              <div
-                key={index}
-                className="mb-4 text-accent group hover:bg-gradient-to-r hover:from-cyan-900/60 hover:via-blue-900/60 hover:to-purple-900/60 hover:shadow-xl rounded-lg transition-all duration-300 backdrop-blur-sm"
-              >
-                <div className="grid gap-4 sm:grid-cols-8 p-4">
-                  <header className="sm:col-span-2 text-slate-400 sm:text-[16px] text-sm">
-                    {exp.timeline}
-                  </header>
-                  <div className="sm:col-span-6 sm:text-left">
-                    <p className="sm:text-xl text-sm font-bold">
-                      {exp.company}
-                    </p>
-                    <p className="sm:text-lg text-sm font-bold">
-                      {exp.designation}
-                    </p>
-                    <p className="text-sm font-normal leading-normal tracking-wide my-2 text-slate-400">
-                      {exp.description.join(" ")}
-                    </p>
-                    <ul className="flex flex-wrap">
-                      {exp.skills.map((skill, i) => (
-                        <li key={i} className="p-1">
-                          <Badge className="cursor-pointer bg-gradient-to-r from-cyan-700 via-blue-700 to-purple-700 group-hover:from-cyan-400 group-hover:via-blue-400 group-hover:to-purple-400 group-hover:text-black transition-all duration-300 shadow-md backdrop-blur-sm">
-                            {skill}
-                          </Badge>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+        <div className="relative mx-auto max-w-3xl">
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400/60 via-blue-400/40 to-purple-400/60" aria-hidden="true" />
+          <ol className="space-y-4">
+            {EXPERIENCES && EXPERIENCES.map((exp, index) => (
+              <li key={index} className="relative pl-10">
+                <span className="absolute left-0 top-3 size-3 rounded-full bg-gradient-to-br from-cyan-400 to-purple-400 shadow-[0_0_0_4px_rgba(8,12,20,0.6)]" aria-hidden="true" />
+                <div className="text-left p-4 rounded-xl hover:bg-white/5 transition-colors">
+                  <div className="text-slate-400 text-xs sm:text-sm font-medium">{exp.timeline}</div>
+                  <div className="mt-1 text-base sm:text-lg font-bold text-slate-100">{exp.company}</div>
+                  <div className="text-sm sm:text-base font-semibold text-slate-300">{exp.designation}</div>
+                  <p className="text-sm leading-normal tracking-wide my-2 text-slate-400">
+                    {exp.description.join(" ")}
+                  </p>
+                  <ul className="flex flex-wrap">
+                    {exp.skills.map((skill, i) => (
+                      <li key={i} className="p-1">
+                        <Badge className="cursor-pointer bg-slate-700 text-slate-200 hover:bg-slate-600 transition-all duration-300 shadow-sm">
+                          {skill}
+                        </Badge>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            );
-          })}
+              </li>
+            ))}
+          </ol>
+        </div>
         <div
           className="flex items-center cursor-pointer w-fit text-left mt-12 text-accent lg:m-0 m-auto hover:text-slate-500 transition-colors duration-300"
           onClick={openResume}

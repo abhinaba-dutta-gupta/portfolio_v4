@@ -68,14 +68,14 @@ const Header = ({ onNavigate }: any) => {
   return (
     <header className="mt-6 sm:mt-10 md:mt-14 lg:mt-0 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div className="bg-gradient-to-br from-[#232526]/80 to-[#414345]/80 rounded-2xl shadow-xl border border-slate-800/40 backdrop-blur-md p-4 sm:p-6 mx-auto w-full max-w-2xl text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 drop-shadow-lg uppercase">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 drop-shadow-lg">
           <Link href="/">Abhinaba Dutta Gupta</Link>
         </h1>
-        <h2 className="mt-3 text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 drop-shadow-md uppercase">
-          Frontend Engineer
+        <h2 className="mt-3 text-xl font-bold tracking-tight text-slate-200">
+          Frontend Engineer • React • TypeScript
         </h2>
         <p className="mt-4 text-slate-300 leading-normal">
-          I build responsive & user-friendly solutions for the web and beyond.
+          I craft performant, accessible interfaces with a strong eye for detail.
         </p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
@@ -132,39 +132,39 @@ const Header = ({ onNavigate }: any) => {
       </div>
       <div className="relative">
         <Dock direction="middle" className="sm:mx-0">
-          <DockIcon className="bg-gradient-to-br from-cyan-900/60 via-blue-900/60 to-purple-900/60 shadow-xl backdrop-blur-lg transition-all duration-300 hover:from-cyan-400 hover:via-blue-400 hover:to-purple-400 hover:scale-110 !border-none !ring-0">
-            <a
-              className="block text-accent hover:text-black"
-              href="https://github.com/abhinaba-dutta-gupta"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="GitHub (opens in a new tab)"
-            >
-              <Icons.gitHub className="size-6 text-accent" />
-            </a>
-          </DockIcon>
-          <DockIcon className="bg-gradient-to-br from-cyan-900/60 via-blue-900/60 to-purple-900/60 shadow-xl backdrop-blur-lg transition-all duration-300 hover:from-cyan-400 hover:via-blue-400 hover:to-purple-400 hover:scale-110 !border-none !ring-0">
-            <a
-              className="block text-accent hover:text-black"
-              href="https://www.linkedin.com/in/abhinaba-dutta-gupta/"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="LinkedIn (opens in a new tab)"
-            >
-              <Icons.linkedin className="size-6 text-accent" />
-            </a>
-          </DockIcon>
-          <DockIcon className="bg-gradient-to-br from-cyan-900/60 via-blue-900/60 to-purple-900/60 shadow-xl backdrop-blur-lg transition-all duration-300 hover:from-cyan-400 hover:via-blue-400 hover:to-purple-400 hover:scale-110 !border-none !ring-0">
-            <a
-              className="block text-accent hover:text-black"
-              href="https://www.instagram.com/its_me_adg/"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="GitHub (opens in a new tab)"
-            >
-              <Icons.instagram className="size-6 text-accent" />
-            </a>
-          </DockIcon>
+           <DockIcon className="bg-gradient-to-br from-cyan-900/60 via-blue-900/60 to-purple-900/60 shadow-xl backdrop-blur-lg transition-all duration-300 hover:bg-white/5 hover:scale-110 !border-none !ring-0">
+             <a
+               className="block text-accent hover:text-black"
+               href="https://github.com/abhinaba-dutta-gupta"
+               target="_blank"
+               rel="noreferrer noopener"
+               aria-label="GitHub (opens in a new tab)"
+             >
+               <Icons.gitHub className="size-6 text-accent" />
+             </a>
+           </DockIcon>
+           <DockIcon className="bg-gradient-to-br from-cyan-900/60 via-blue-900/60 to-purple-900/60 shadow-xl backdrop-blur-lg transition-all duration-300 hover:bg-white/5 hover:scale-110 !border-none !ring-0">
+             <a
+               className="block text-accent hover:text-black"
+               href="https://www.linkedin.com/in/abhinaba-dutta-gupta/"
+               target="_blank"
+               rel="noreferrer noopener"
+               aria-label="LinkedIn (opens in a new tab)"
+             >
+               <Icons.linkedin className="size-6 text-accent" />
+             </a>
+           </DockIcon>
+           <DockIcon className="bg-gradient-to-br from-cyan-900/60 via-blue-900/60 to-purple-900/60 shadow-xl backdrop-blur-lg transition-all duration-300 hover:bg-white/5 hover:scale-110 !border-none !ring-0">
+             <a
+               className="block text-accent hover:text-black"
+               href="https://www.instagram.com/its_me_adg/"
+               target="_blank"
+               rel="noreferrer noopener"
+               aria-label="Instagram (opens in a new tab)"
+             >
+               <Icons.instagram className="size-6 text-accent" />
+             </a>
+           </DockIcon>
         </Dock>
       </div>
       {/* <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">

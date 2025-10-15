@@ -48,6 +48,7 @@ export default function Home() {
     // "androidstudio",
     // "sonarqube",
     "figma",
+    "vercel",
   ];
 
   const images = slugs.map(
@@ -57,16 +58,17 @@ export default function Home() {
   return (
     <main
       className={`relative min-h-screen w-full font-sans ${inter.className} ${poppins.className}`}
-      style={{
-        background:
-          "linear-gradient(135deg, #232526 0%, #414345 100%)",
-        minHeight: "100vh",
-      }}
     >
-      {/* Glassmorphism overlay */}
-      <div className="absolute inset-0 pointer-events-none z-0" style={{
-        background: "radial-gradient(circle at 20% 30%, rgba(80,200,255,0.10) 0%, transparent 60%), radial-gradient(circle at 80% 70%, rgba(255,80,200,0.10) 0%, transparent 60%)"
-      }} />
+      {/* Background */}
+      <div className="absolute inset-0 -z-10" aria-hidden>
+        <div className="absolute inset-0" style={{
+          background:
+            "radial-gradient(1200px 600px at -10% -10%, rgba(56,189,248,0.20), transparent 60%), radial-gradient(1200px 600px at 110% 110%, rgba(168,85,247,0.20), transparent 60%), linear-gradient(135deg, #0f172a 0%, #111827 60%, #0b1220 100%)",
+        }} />
+      </div>
+      {/* Decorative overlays */}
+      <div className="absolute inset-0 bg-noise opacity-60 pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-grid opacity-[0.35] pointer-events-none z-0" />
       <div className="relative z-10 flex justify-center w-full px-2 sm:px-4">
         <div className="w-full max-w-screen-xl lg:flex lg:justify-between lg:gap-4">
           <Header onNavigate={scrollToSection} />
@@ -75,7 +77,7 @@ export default function Home() {
             <Experience id="experience" />
             <Projects id="projects" />
             <Contact id="contact" />
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center rounded-2xl">
               <IconCloud images={images} />
             </div>
             <Footer id="footer" />
