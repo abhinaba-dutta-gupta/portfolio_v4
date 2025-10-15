@@ -43,12 +43,12 @@ const Projects = ({ id }: any) => {
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className="flex flex-col md:flex-row w-full p-6 bg-white/5 hover:bg-white/5 hover:shadow-2xl rounded-2xl transition-all duration-300 backdrop-blur-lg group focus-within:ring-2 focus-within:ring-cyan-400/50"
+              className="flex flex-col md:flex-row w-full p-6 hover:bg-white/5 rounded-2xl transition-colors group focus-within:ring-2 focus-within:ring-cyan-400/50"
             >
               <Image
                 src={project.image}
                 alt="project image"
-                className="md:w-2/5 md:h-1/4 md:p-0 p-4 mr-4 rounded-xl shadow-lg object-cover border-2 border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300"
+                className="md:w-2/5 md:h-1/4 md:p-0 p-4 mr-4 rounded-xl shadow-lg object-cover border-2 border-cyan-400/30"
               />
               <div className="w-full lg:w-auto md:text-left flex flex-col justify-center">
                 <Link
