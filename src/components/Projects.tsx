@@ -9,26 +9,26 @@ const Projects = ({ id }: any) => {
   const PROJECTS = [
     {
       id: 1,
-      title: "ReactQuizz",
+      title: "BatteryReplacementApp",
       description:
-        "ReactQuizz is a trivia app built with React, offers users an immersive and interactive experience with a wide range of trivia questions.",
-      link: "https://github.com/abhinaba-dutta-gupta/quiz_app",
+        "A React Native app for managing and tracking battery replacements, built with TypeScript.",
+      link: "https://github.com/abhinaba-dutta-gupta/BatteryReplacementApp",
       image: project1,
     },
     {
       id: 2,
-      title: "InterviewHub",
+      title: "NoteItDown",
       description:
-        "An app made with React, Node & MongoDB for conducting interviews featuring authentication, database integration and a user-friendly interface, ensuring smooth interview experiences for interviewers.",
-      link: "https://github.com/abhinaba-dutta-gupta/order_of_merlin",
+        "A notes app built with React Native (Expo) for easy, organized note-taking on mobile.",
+      link: "https://github.com/abhinaba-dutta-gupta/NoteItDown",
       image: project2,
     },
     {
       id: 3,
-      title: "FlavorDash",
+      title: "Trivia Tycoon",
       description:
-        "A react app based on an e-commerce website under development. Coming soon!",
-      link: "",
+        "A Trivia App built with React – multiple-choice quizzes and a money ladder challenge.",
+      link: "https://github.com/abhinaba-dutta-gupta/quiz_app",
       image: project3,
     },
   ];
